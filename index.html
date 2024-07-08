@@ -128,12 +128,24 @@
 
     @media (min-width: 1200px) {
       .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
     .popup img.wide-image {
       max-width: 300px;
+    }
+
+    .popup img.wider-image {
+      max-width: 330px;
+    }
+
+    .popup img.widest-image {
+      max-width: 330px;
+    }
+
+    .popup img.big-image {
+      max-width: 256px;
     }
 
     .tile {
@@ -226,6 +238,10 @@
     .popup.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    .subtitle-later {
+      margin-top: 50px;
     }
 
     .popup-content {
@@ -322,12 +338,6 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-      }
-    }
-
     .socials {
       display: flex;
       justify-content: center;
@@ -349,6 +359,78 @@
       width: var(--icon-size);
       height: var(--icon-size);
     }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 1rem 2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .tile {
+        padding: 1.5rem;
+      }
+
+      .tile h2 {
+        font-size: 1.5rem;
+      }
+
+      .tile p {
+        font-size: 0.9rem;
+      }
+
+      .popup-content {
+        padding: 2rem;
+        width: 95%;
+      }
+
+      .popup h2 {
+        font-size: 1.8rem;
+      }
+
+      .popup p {
+        font-size: 1rem;
+      }
+
+      .popup img {
+        max-width: 50%;
+        height: auto;
+        float: none;
+        margin: 0 0 1rem 0;
+      }
+
+      .close-btn {
+        width: 50px;
+        height: 50px;
+      }
+
+      .socials {
+        padding: 1rem 0;
+      }
+
+      .socials svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .background {
+        background: radial-gradient(circle at center,
+            rgba(59, 130, 246, 0.1),
+            rgba(139, 92, 246, 0.1) 10%,
+            rgba(15, 23, 42, 0.3) 20%);
+      }
+    }
   </style>
 </head>
 
@@ -357,47 +439,63 @@
   <div class="background"></div>
   <div class="container">
     <h1>Charlie Ashford</h1>
-    <p class="subtitle">Welcome! I've been making projects for the past 4 years. <br>These are some of my best</p>
+    <p class="subtitle">Welcome! I've been making projects for the past 4 years. <br>Here you can see all of my newer
+      public ones, in one place.</p>
     <div class="grid">
       <div class="tile" data-project="1">
+        <h2>SSSniperwolf Crediting Helper</h2>
+        <p>A community project spreadsheet with clips from SSSniperwolf's videos, allowing the community to credit the
+          original creators.</p>
+      </div>
+      <div class="tile" data-project="2">
+        <h2>MrBeast Minutely Data</h2>
+        <p>A Google Sheet of MrBeast's linear estimated 2024 data, every 10 minutes.</p>
+      </div>
+      <div class="tile" data-project="3">
         <h2>Communitrics</h2>
         <p>Communitrics is your all-in-one Discord Bot for tracking YouTube milestones in real-time.</p>
       </div>
-      <div class="tile" data-project="2">
-        <h2>Live Count Site</h2>
-        <p>Communitrics live counter is the best way to keep up to date on your favourite channels subscriber counts.
-        </p>
+      <div class="tile" data-project="4">
+        <h2>Old Communitrics Live Count Site</h2>
+        <p>Archived project, see <a href="https://communitrics.vercel.app" target="_blank">the new live count site</a>
+          for the latest version.</p>
       </div>
-      <div class="tile" data-project="3">
+      <div class="tile" data-project="5">
+        <h2>Top 10,000 YouTube Channels</h2>
+        <p>A list of the top 10,000 YouTube channels, sorted by subscriber count.</p>
+      </div>
+      <div class="tile" data-project="6">
+        <h2>Communitrics Graphs</h2>
+        <p>Full historic subscriber and daily average graphs of any channel that Communitrics is tracking.</p>
+      </div>
+      <div class="tile" data-project="7">
+        <h2>Communitrics API</h2>
+        <p>Real-time estimations for all channels that Communitrics is tracking, in a simple API.</p>
+      </div>
+      <div class="tile" data-project="8">
+        <h2>Global Clicker</h2>
+        <p>A global clicker website, that anyone can access and increase the count.</p>
+      </div>
+      <div class="tile" data-project="9">
         <h2>MrBeast Graph</h2>
         <p>Real-time graph of MrBeast's studio subscriber count, powered by <a
             href="https://viewstats.com/">Viewstats</a>.</p>
       </div>
-      <div class="tile" data-project="4">
-        <h2>Project 4</h2>
-        <p>Placeholder description for Project 4.</p>
+      <div class="tile" data-project="10">
+        <h2>MrBeast Stats Live Followers</h2>
+        <p>A live follower count of the @MrBeast_Stats Twitter account.</a> for the latest version.</p>
       </div>
-      <div class="tile" data-project="5">
-        <h2>Project 5</h2>
-        <p>Placeholder description for Project 5.</p>
+      <div class="tile" data-project="11">
+        <h2>Channel Comparisons</h2>
+        <p>An easy way to view a comparison of any two set channels on Communitrics.</p>
       </div>
-      <div class="tile" data-project="6">
-        <h2>Project 6</h2>
-        <p>Placeholder description for Project 6.</p>
-      </div>
-      <div class="tile" data-project="7">
-        <h2>Project 7</h2>
-        <p>Placeholder description for Project 7.</p>
-      </div>
-      <div class="tile" data-project="8">
-        <h2>Project 8</h2>
-        <p>Placeholder description for Project 8.</p>
-      </div>
-      <div class="tile" data-project="9">
-        <h2>Project 9</h2>
-        <p>Placeholder description for Project 9.</p>
+      <div class="tile" data-project="12">
+        <h2>Communitrics Live Count Site</h2>
+        <p>Communitrics live counter is the best way to keep up to date on your favourite channels subscriber counts.
+        </p>
       </div>
     </div>
+    <p class="subtitle subtitle-later">More projects will be added soon, so check back later.</p>
 
     <div class="popup">
       <div class="popup-content">
@@ -462,55 +560,88 @@
     <script>
       const projects = {
         1: {
-          title: "Communitrics",
-          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">Feb 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Actively Developing</span><br><br>Communitrics is your all-in-one Discord Bot for tracking YouTube milestones in real-time.<br><br>Currently tracking 1,000+ YouTube channels, we allow for average calculations, overtaking date estimations, video upload notifying, future subscriber estimations, and of course, the main feature being real-time embeds and messages when your favorite channels reach new milestones.`,
-          image: "./images/project1.png",
-          link: "https://github.com/charlie-ashford/communitrics"
+          title: "SSSniperwolf Crediting Helper",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">October 2023</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Archived</span><br><br>The only non-statistics project on here! A community project spreadsheet with clips from SSSniperwolf's videos, allowing the community to credit the original creators.<br><br>This spreadsheet was filled in with information from the community. Anyone could choose a SSSniperwolf video, try to find the original creators of the clips in the video, and credit + contact them, all through the spreadsheet.`,
+          image: "images/project12.png",
+          imageClass: "widest-image",
+          link: "https://communitrics.github.io/top-youtube-channels/"
         },
         2: {
-          title: "Live Count Site",
-          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">June 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Making Improvements</span><br><br>Communitrics live counter is the best way to keep up to date on your favourite channels subscriber counts.<br><br>Using the Communitrics API and linear estimations, view the current estimated subscriber counts for your favourite channels, watch as it increases and see the subscriber graph in real-time.`,
-          image: "./images/project2.png",
+          title: "MrBeast Minutely Data",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">January 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Archived</span><br><br>A Google Sheet of MrBeast's linear estimated 2024 data, every 10 minutes.<br><br>This sheet is no longer updated, as all data is on Communitrics and the other projects now. The sheet is still available to view, and includes January - March 2024.`,
+          image: "images/project11.png",
           imageClass: "wide-image",
-          link: "https://communitrics.vercel.app/"
+          link: "https://communitrics.github.io/top-youtube-channels/"
         },
         3: {
+          title: "Communitrics",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">Feb 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Actively Developing</span><br><br>Communitrics is your all-in-one Discord Bot for tracking YouTube milestones in real-time.<br><br>Currently tracking 1,700+ YouTube channels, we allow for average calculations, overtaking date estimations, video upload notifying, future subscriber estimations, and of course, the main feature being real-time embeds and messages when your favorite channels reach new milestones.`,
+          image: "images/project1.png",
+          link: "https://github.com/communitrics"
+        },
+        4: {
+          title: `Old Communitrics Live Count <br> Site`,
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">March 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Archived</span><br><br>Archived project, see <span style="text-decoration: underline; cursor: pointer;" onclick="window.location.href='https://communitrics.vercel.app';">the new live count site</span> for the latest version.`,
+          image: "images/project8.png",
+          imageClass: "wide-image",
+          link: "https://communitrics.com",
+        },
+        5: {
+          title: "Top 10,000 YouTube Channels",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">March 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete</span><br><br>A list of the top 10,000 YouTube channels, sorted by subscriber count.<br><br>An always-updating list of the top 10,000 YouTube channels. The list allows for sorting or filtering by subscriber count, average monthly views and more The list is also downloadable as a CSV file.`,
+          image: "images/project9.png",
+          imageClass: "wide-image",
+          link: "https://communitrics.github.io/top-youtube-channels/"
+        },
+        6: {
+          title: "Communitrics Graphs",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">April 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete</span><br><br>Full historic subscriber and daily average graphs of any channel that Communitrics is tracking.<br><br>A site to view historical subscriber and daily average graphs of any channel that Communitrics is tracking. The graphs are updated whenever a subscriber count change happens through the YouTube API.`,
+          image: "images/project6.png",
+          imageClass: "wider-image",
+          link: "https://charlie-ashford.github.io/channelGraphs/",
+        },
+        7: {
+          title: "Communitrics API",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete / Making Improvements</span><br><br>Real-time estimations for all channels that Communitirics is tracking, in a simple API.<br><br>Linear estimations, channel branding, averages, historical data and more are all available in the Communitrics API. The API is free and simple to use, to integrate into your own sites, livestreams or other projects.`,
+          image: "images/project4.png",
+          imageClass: "wide-image",
+          link: "https://github.com/communitrics/api"
+        },
+        8: {
+          title: "Global Clicker",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete</span><br><br>A global clicker website, that anyone can access and increase the count.<br><br>The global clicker is a simple website that anyone can access, and increase the global number by clicking. You can choose to increase the number by a higher amount, but this adds a cooldown time for everyone else.`,
+          image: "images/project5.png",
+          imageClass: "big-image",
+          link: "https://charlie-ashford.github.io/globalCounter/",
+        },
+        9: {
           title: "MrBeast Graph",
-          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete / Making Improvements</span><br><br>Real-time graph of MrBeast's studio subscriber count, powered by <span style="text-decoration: underline; cursor: pointer;" onclick="window.location.href='http://viewstats.com';">Viewstats</span>.<br><br>A complete graph of the MrBeast channel studio subscriber count, with historic hourly and daily data, and a live graph of the current count. All powered by Viewstats.`,
-          image: "./images/project3.png",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete / Making Improvements</span><br><br>Real-time graph of MrBeast's studio subscriber count, powered by <span style="text-decoration: underline; cursor: pointer;" onclick="window.location.href='https://viewstats.com';">Viewstats</span>.<br><br>A complete graph of the MrBeast channel studio subscriber count, with historic hourly and daily data, and a live graph of the current count. All powered by Viewstats.`,
+          image: "images/project3.png",
           imageClass: "wide-image",
           link: "https://github.com/charlie-ashford/mrbeast-graph"
         },
-        4: {
-          title: "Project 4",
-          description: "Placeholder description for Project 4.",
-          link: "#",
+        10: {
+          title: "MrBeast Stats Live Followers",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete</span><br><br>A live follower count of the @MrBeast_Stats Twitter account.<br><br>Live follower count of the @MrBeast_Stats Twitter account. The count is updated in real-time, with confetti that shows on the site when the account reaches a new milestone.`,
+          image: "images/project10.png",
+          imageClass: "wide-image",
+          link: "https://charlie-ashford.github.io/mrbeastStats/"
         },
-        5: {
-          title: "Project 5",
-          description: "Placeholder description for Project 5.",
-          link: "#",
+        11: {
+          title: "Channel Comparisons",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">June 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete / Making Improvements</span><br><br>An easy way to view a comparison of any two set channels on Communitrics.<br><br>A site to view the subscriber counts / past 30 day gains of any two set channels, updated when a new "battle" emerges. Currently shows MrBeast vs Hamster Kombat gains since Hamster Kombat channel creation.`,
+          image: "images/project7.png",
+          imageClass: "wide-image",
+          link: "https://mrbeastvshko.vercel.app/",
         },
-        6: {
-          title: "Project 6",
-          description: "Placeholder description for Project 6.",
-          link: "#",
-        },
-        7: {
-          title: "Project 7",
-          description: "Placeholder description for Project 7.",
-          link: "#",
-        },
-        8: {
-          title: "Project 8",
-          description: "Placeholder description for Project 8.",
-          link: "#",
-        },
-        9: {
-          title: "Project 9",
-          description: "Placeholder description for Project 9.",
-          link: "#",
-        },
+        12: {
+          title: "Communitrics Live Count Site",
+          description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">June 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Making Improvements</span><br><br>Communitrics live counter is the best way to keep up to date on your favourite channels subscriber counts.<br><br>Using the Communitrics API and linear estimations, view the current estimated subscriber counts for your favourite channels, watch as it increases and see the subscriber graph in real-time.`,
+          image: "images/project2.png",
+          imageClass: "wide-image",
+          link: "https://communitrics.vercel.app/"
+        }
       };
 
       const popup = document.querySelector(".popup");
