@@ -338,6 +338,38 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
 
+    .socials .bmc-button iframe {
+      transform: scale(0.5);
+      transform-origin: center;
+      border: none;
+      background-color: var(--tile-color);
+    }
+
+    .bmc-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .socials .bmc-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--icon-size);
+      padding: 0 0.5rem;
+      background-color: var(--tile-color);
+      border-radius: 8px;
+      border: 1px solid var(--accent-color);
+      text-decoration: none;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      font-size: 0.8rem;
+    }
+
+    .socials .bmc-button:hover {
+      background-color: var(--accent-color);
+      border-color: var(--gradient-end);
+    }
+
     .socials {
       display: flex;
       justify-content: center;
@@ -483,7 +515,7 @@
       </div>
       <div class="tile" data-project="10">
         <h2>MrBeast Stats Live Followers</h2>
-        <p>A live follower count of the @MrBeast_Stats Twitter account.</a></p>
+        <p>A live follower count of the @MrBeast_Stats Twitter account.</a> for the latest version.</p>
       </div>
       <div class="tile" data-project="11">
         <h2>Channel Comparisons</h2>
@@ -495,7 +527,7 @@
         </p>
       </div>
     </div>
-    <p class="subtitle subtitle-later">More projects will be added soon, so check back later!</p>
+    <p class="subtitle subtitle-later">More projects will be added soon, so check back later.</p>
 
     <div class="popup">
       <div class="popup-content">
@@ -557,6 +589,12 @@
         </svg>
       </a>
     </div>
+    <div class="bmc-button-container">
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+        data-name="bmc-button" data-slug="communitrics" data-color="#1e293b" data-emoji="☕" data-font="Inter"
+        data-text="Help fund these projects!" data-outline-color="#000000" data-font-color="#ffffff"
+        data-coffee-color="#60a5fa"></script>
+    </div>
     <script>
       const projects = {
         1: {
@@ -564,14 +602,14 @@
           description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">October 2023</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Archived</span><br><br>The only non-statistics project on here! A community project spreadsheet with clips from SSSniperwolf's videos, allowing the community to credit the original creators.<br><br>This spreadsheet was filled in with information from the community. Anyone could choose a SSSniperwolf video, try to find the original creators of the clips in the video, and credit + contact them, all through the spreadsheet.`,
           image: "images/project12.png",
           imageClass: "widest-image",
-          link: "https://docs.google.com/spreadsheets/d/1fYT2b7J6T8QKbwszbdrFMq5alKdq86eDPPtnwV_lsIM/edit?gid=0#gid=0/"
+          link: "https://docs.google.com/spreadsheets/d/1fYT2b7J6T8QKbwszbdrFMq5alKdq86eDPPtnwV_lsIM/"
         },
         2: {
           title: "MrBeast Minutely Data",
           description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">January 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Archived</span><br><br>A Google Sheet of MrBeast's linear estimated 2024 data, every 10 minutes.<br><br>This sheet is no longer updated, as all data is on Communitrics and the other projects now. The sheet is still available to view, and includes January - March 2024.`,
           image: "images/project11.png",
           imageClass: "wide-image",
-          link: "https://docs.google.com/spreadsheets/d/1JoC39zfLLrKUBxyqLBOIPA8KvYmqkfZIAM1BFoUAH9o/edit?usp=sharing/"
+          link: "https://docs.google.com/spreadsheets/d/1JoC39zfLLrKUBxyqLBOIPA8KvYmqkfZIAM1BFoUAH9o/"
         },
         3: {
           title: "Communitrics Discord Bot",
@@ -619,7 +657,7 @@
           description: `<strong style="font-size: 110%;">Began:</strong> <span style="font-size: 110%;">May 2024</span><br><strong style="font-size: 110%;">Status:</strong> <span style="font-size: 110%;">Complete / Making Improvements</span><br><br>Real-time graph of MrBeast's studio subscriber count, powered by <span style="text-decoration: underline; cursor: pointer;" onclick="window.location.href='https://viewstats.com';">Viewstats</span>.<br><br>A complete graph of the MrBeast channel studio subscriber count, with historic hourly and daily data, and a live graph of the current count. All powered by Viewstats.`,
           image: "images/project3.png",
           imageClass: "wide-image",
-          link: "https://charlie-ashford.github.io/mrbeastGraph/"
+          link: "https://github.com/charlie-ashford/mrbeast-graph"
         },
         10: {
           title: "MrBeast Stats Live Followers",
