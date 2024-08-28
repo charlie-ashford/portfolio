@@ -132,7 +132,7 @@
         text-align: center;
         font-size: 1.2rem;
         font-weight: 400;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         background: linear-gradient(
           to right,
           var(--gradient-start),
@@ -280,7 +280,23 @@
       }
 
       .subtitle-later {
-        margin-top: 50px;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        background: linear-gradient(
+          to right,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: textGlow 3s infinite alternate;
       }
 
       .popup-content {
@@ -389,6 +405,7 @@
       .bmc-button-container {
         display: flex;
         justify-content: center;
+        margin-bottom: 4rem;
         align-items: center;
       }
 
@@ -488,10 +505,6 @@
           height: 50px;
         }
 
-        .socials {
-          padding: 1rem 0;
-        }
-
         .socials svg {
           width: 24px;
           height: 24px;
@@ -580,7 +593,7 @@
           <p>See 5-minutely data of any MrBeast video, updated in real-time.</p>
         </div>
       </div>
-      <p class="subtitle subtitle-later">
+      <p class="subtitle-later">
         More projects will be added soon, so check back later!<br /><br />Feel
         free to contact me at any of these methods to reach out about any of my
         projects, <br />or inquire about a custom-made project for yourself!
